@@ -1,0 +1,12 @@
+n = int(input())
+
+for i in range(n):
+    string_line = input()
+
+    for ch in string_line:
+        if ch == '.' or ch == ',' or ch == '_':
+            print(f"{string_line} is not pure!")
+            break
+    else:
+        print(f"{string_line} is pure.")
+

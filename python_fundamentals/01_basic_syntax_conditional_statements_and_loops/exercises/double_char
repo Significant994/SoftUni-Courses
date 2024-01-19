@@ -1,0 +1,13 @@
+start_string = input()
+new_string = ''
+
+while start_string != 'End':
+
+    for ch in start_string:
+        new_string += ch * 2
+
+    if start_string != 'SoftUni':
+        print(new_string)
+
+    new_string = ""
+    start_string = input()

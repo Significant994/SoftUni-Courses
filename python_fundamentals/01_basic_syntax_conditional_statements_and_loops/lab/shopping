@@ -1,0 +1,14 @@
+budget = int(input())
+
+line_input = input()
+
+while line_input != "End":
+    number = int(line_input)
+    budget -= number
+
+    if budget < 0:
+        print("You went in overdraft!")
+        break
+    line_input = input()
+else:
+    print("You bought everything needed.")

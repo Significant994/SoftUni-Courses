@@ -1,0 +1,10 @@
+year = int(input())
+
+year += 1
+happy_year = set(str(year))
+
+while len(str(year)) != len(happy_year):
+    year += 1
+    happy_year = set(str(year))
+
+print(year)

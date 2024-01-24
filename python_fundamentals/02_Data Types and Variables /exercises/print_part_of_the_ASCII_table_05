@@ -1,8 +1,5 @@
-number_of_lines_n = int(input())
-sum_of_chars = 0
+start_index = int(input())
+end_index = int(input())
 
-for char in range(number_of_lines_n):
-    char = ord(input())
-    sum_of_chars += char
-
-print(f"The sum equals: {sum_of_chars}")
+for index in range(start_index, end_index + 1):
+    print(chr(index),end=" ")

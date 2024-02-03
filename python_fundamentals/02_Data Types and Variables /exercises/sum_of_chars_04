@@ -1,8 +1,0 @@
-number_of_lines_n = int(input())
-sum_of_chars = 0
-
-for char in range(number_of_lines_n):
-    char = ord(input())
-    sum_of_chars += char
-
-print(f"The sum equals: {sum_of_chars}")

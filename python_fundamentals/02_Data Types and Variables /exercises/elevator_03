@@ -1,8 +1,0 @@
-import math
-
-number_n = int(input())
-capacity_p = int(input())
-
-courses = math.ceil(number_n / capacity_p)
-
-print(courses)

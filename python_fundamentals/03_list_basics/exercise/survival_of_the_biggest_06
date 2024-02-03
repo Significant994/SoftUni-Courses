@@ -1,0 +1,12 @@
+list_with_numbers = input().split()
+numbers_to_remove = int(input())
+
+numbers_as_digists = [int(x) for x in list_with_numbers]
+
+for i in range(numbers_to_remove):
+    min_number = min(numbers_as_digists)
+    numbers_as_digists.remove(min_number)
+
+string_as_digits = [str(x) for x in numbers_as_digists]
+
+print(', '.join(string_as_digits))

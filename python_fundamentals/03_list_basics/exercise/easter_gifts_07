@@ -1,0 +1,30 @@
+gifts = input().split()
+
+command = input()
+while command != 'No Money':
+    command_arguments = command.split()
+    command_name = command_arguments[0]
+    command_gift = command_arguments[1]
+
+    if command_name == 'OutOfStock':
+        for index in range(len(gifts)):
+            if gifts[index] == command_gift:
+                gifts[index] = 'None'
+
+
+    elif command_name == 'Required':
+        idx = int(command_arguments[2])
+        if 0 <= idx < len(gifts):
+            gifts[idx] = command_gift
+
+    elif command_name == 'JustInCase':
+        gifts[-1] = command_gift
+
+    command = input()
+
+list_without_none = []
+for gift in gifts:
+    if gift != 'None':
+        list_without_none.append(gift)
+
+print(' '.join(list_without_none))

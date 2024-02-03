@@ -1,0 +1,7 @@
+first_character = input()
+secomd_character = input()
+third_character = input()
+
+result = first_character + secomd_character + third_character
+
+print(result)

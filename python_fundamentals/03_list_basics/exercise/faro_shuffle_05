@@ -1,0 +1,33 @@
+deck_of_cards = input()
+count = int(input())
+
+list_deck_of_cards = deck_of_cards.split()
+
+for _ in range(count):
+    first_half = []
+    second_half = []
+
+    for i in range(1, len(list_deck_of_cards) - 1):
+        card = list_deck_of_cards[i]
+        if i < len(list_deck_of_cards) / 2:
+            first_half.append(card)
+        else:
+            second_half.append(card)
+
+    new_list_deck_of_cards = []
+    first_index = 0
+    second_index = 0
+
+    for index in range(len(first_half * 2)):
+        if index % 2 == 0:
+            new_list_deck_of_cards.append(second_half[second_index])
+            second_index += 1
+        else:
+            new_list_deck_of_cards.append(first_half[first_index])
+            first_index += 1
+
+    list_deck_of_cards = [list_deck_of_cards[0]] + new_list_deck_of_cards + [list_deck_of_cards[-1]]
+
+print(list_deck_of_cards)
+
+

@@ -1,0 +1,16 @@
+number_of_snowballs = int(input())
+best_snowball = float('-inf')
+snowball_final_result = ''
+
+for snowball in range(number_of_snowballs):
+    snowball_weight = int(input())
+    snowball_target_time = int(input())
+    snowball_quality = int(input())
+
+    snowball_value = (snowball_weight // snowball_target_time) ** snowball_quality
+
+    if snowball_value > best_snowball:
+        best_snowball = snowball_value
+        snowball_final_result = f"{snowball_weight} : {snowball_target_time} = {snowball_value} ({snowball_quality})"
+
+print(snowball_final_result)

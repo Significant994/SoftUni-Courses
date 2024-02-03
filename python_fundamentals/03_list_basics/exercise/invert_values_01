@@ -1,0 +1,10 @@
+string_of_numbers = input()
+
+list_of_numbers = string_of_numbers.split()
+
+new_list_of_numbers = []
+
+for number in list_of_numbers:
+    new_list_of_numbers.append(-int(number))
+
+print(new_list_of_numbers)

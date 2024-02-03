@@ -1,0 +1,38 @@
+initial_fires = input().split('#')
+amount_of_water = int(input())
+
+total_fire = 0
+total_cells = []
+current_water = amount_of_water
+
+for cell in initial_fires:
+
+    cell_arguments = cell.split(' = ')
+    fire_level = cell_arguments[0]
+    water_needed = int(cell_arguments[1])
+
+    if water_needed > current_water:
+        continue
+
+    if fire_level == 'High' and 81 <= water_needed <= 125:
+        total_fire += water_needed
+        total_cells.append(water_needed)
+        current_water -= water_needed
+
+    if fire_level == 'Medium' and 51 <= water_needed <= 80:
+        total_fire += water_needed
+        total_cells.append(water_needed)
+        current_water -= water_needed
+
+    if fire_level == 'Low' and 1 <= water_needed <= 50:
+        total_fire += water_needed
+        total_cells.append(water_needed)
+        current_water -= water_needed
+
+effort = 0.25 * total_fire
+
+print('Cells:')
+for cell in total_cells:
+    print(f" - {cell}")
+print(f"Effort: {effort:.2f}")
+print(f"Total Fire: {total_fire}")

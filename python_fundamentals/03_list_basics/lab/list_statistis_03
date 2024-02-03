@@ -1,0 +1,16 @@
+n = int(input())
+
+postives_list = []
+negatives_list = []
+
+for _ in range(n):
+    number = int(input())
+    if number >= 0:
+        postives_list.append(number)
+    else:
+        negatives_list.append(number)
+
+print(postives_list)
+print(negatives_list)
+print(f"Count of positives: {len(postives_list)}")
+print(f"Sum of negatives: {sum(negatives_list)}")

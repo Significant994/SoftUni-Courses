@@ -1,0 +1,19 @@
+initial_values = input()
+number_of_beggars = int(input())
+beggars_list = [0] * number_of_beggars
+
+initial_values_list = initial_values.split(', ')
+
+initial_values_list = [int(x) for x in initial_values_list]
+pointer = 0
+
+for i in range(len(initial_values_list)):
+
+    if pointer == len(beggars_list):
+        pointer = 0
+
+    beggars_list[pointer] += initial_values_list[i]
+    pointer += 1
+
+
+print(beggars_list)

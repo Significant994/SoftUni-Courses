@@ -1,0 +1,23 @@
+def bar_loading(num):
+    percent_value = int(number / 10)
+    dot_value = int((100 - number) / 10)
+    first_string = percent_value * '%'
+    second_string = dot_value * '.'
+    if number == 100:
+        result = f"[{first_string}{second_string}]"
+    else:
+        result = f"{number}% [{first_string}{second_string}]"
+    return result
+
+
+number = int(input())
+final_bar = bar_loading(number)
+if number == 100:
+    print("100% Complete!")
+    print(final_bar)
+else:
+    print(final_bar)
+    print("Still loading...")
+
+
+

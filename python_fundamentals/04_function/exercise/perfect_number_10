@@ -1,0 +1,19 @@
+def perfet_number_validation(number):
+    end_index = number // 2
+    sum_of_dividors = 0
+    for i in range(1, end_index):
+        if number % i == 0:
+            sum_of_dividors += i
+    if sum_of_dividors + number // 2 == number:
+        return True
+    return False
+
+
+input_number = int(input())
+if perfet_number_validation(input_number):
+    print("We have a perfect number!")
+else:
+    print("It's not so perfect.")
+
+
+

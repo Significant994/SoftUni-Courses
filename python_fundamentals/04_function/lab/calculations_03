@@ -1,0 +1,18 @@
+def calculations(operator, number_a, number_b):
+    result = 0
+    if operator == "multiply":
+        result = number_a * number_b
+    elif operator == "divide":
+        result = number_a // number_b
+    elif operator == "add":
+        result = number_a + number_b
+    elif operator == "subtract":
+        result = number_a - number_b
+    return result
+
+
+command = input()
+first_number = int(input())
+second_number = int(input())
+final_result = calculations(command, first_number, second_number)
+print(final_result)

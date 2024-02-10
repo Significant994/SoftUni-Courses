@@ -1,0 +1,5 @@
+numbers = [int(x) for x in input().split()]
+
+even_numbers = list(filter(lambda digit: digit % 2 == 0, numbers))
+
+print(even_numbers)

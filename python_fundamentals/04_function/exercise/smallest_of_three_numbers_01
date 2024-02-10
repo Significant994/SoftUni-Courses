@@ -1,0 +1,12 @@
+def smallest_number(numbers):
+    min_number = min(numbers)
+    return min_number
+
+
+initial_numbers = []
+for _ in range(3):
+    number = int(input())
+    initial_numbers.append(number)
+result = smallest_number(initial_numbers)
+print(result)
+

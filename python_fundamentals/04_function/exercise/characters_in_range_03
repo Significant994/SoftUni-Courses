@@ -1,0 +1,14 @@
+def string_retruns(char_one, char_two):
+    start_index = ord(char_one)
+    end_index = ord(char_two)
+    chars_between = []
+    for i in range(start_index + 1, end_index):
+        new_char = chr(i)
+        chars_between.append(new_char)
+    return chars_between
+
+
+first_character = input()
+second_character = input()
+result = string_retruns(first_character, second_character)
+print(' '.join(result))

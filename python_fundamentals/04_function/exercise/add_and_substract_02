@@ -1,0 +1,21 @@
+def sum_numbers(a, b):
+    sum = a + b
+    return sum
+
+
+def subtract(sum, c):
+    difference = sum - c
+    return difference
+
+
+def add_and_subtract(a, b, c):
+    the_sum = sum_numbers(a, b)
+    result = subtract(the_sum, c)
+    return result
+
+
+first_number = int(input())
+second_number = int(input())
+third_number = int(input())
+final_result = add_and_subtract(first_number, second_number, third_number)
+print(final_result)

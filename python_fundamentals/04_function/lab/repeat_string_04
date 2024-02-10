@@ -1,0 +1,6 @@
+initial_string = input()
+counter = int(input())
+
+new_string = lambda original_string, n: original_string * n
+
+print(new_string(initial_string, counter))

@@ -1,0 +1,14 @@
+number_of_electrons = int(input())
+shells_electrons = []
+position = 0
+
+while number_of_electrons > 0:
+    position += 1
+    electron_in_cell = 2 * (position ** 2)
+    if number_of_electrons < electron_in_cell:
+        shells_electrons.append(number_of_electrons)
+        break
+    shells_electrons.append(electron_in_cell)
+    number_of_electrons -= electron_in_cell
+
+print(shells_electrons)

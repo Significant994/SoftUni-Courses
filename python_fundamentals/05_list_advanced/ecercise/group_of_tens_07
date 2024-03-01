@@ -1,0 +1,19 @@
+from math import ceil
+
+sequence_of_numbers = [int(x) for x in input().split(', ')]
+
+max_value = max(sequence_of_numbers)
+low_boundery = 1
+high_boundery = 10
+
+group_list = []
+
+for _ in range(ceil(max_value / 10)):
+    for number in sequence_of_numbers:
+        if low_boundery <= number <= high_boundery:
+            group_list.append(number)
+
+    print(f"Group of {high_boundery}'s: {group_list}")
+    group_list = []
+    low_boundery += 10
+    high_boundery += 10

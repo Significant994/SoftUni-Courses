@@ -1,0 +1,23 @@
+number_of_wagons = int(input())
+
+train_list = [0] * number_of_wagons
+
+command = input()
+
+while command != "End":
+    split_command = command.split(" ")
+    action = split_command[0]
+    if action == "add":
+        people = int(split_command[1])
+        train_list[-1] += people
+    elif action == "insert":
+        index = int(split_command[1])
+        people = int(split_command[2])
+        train_list[index] += people
+    elif action == "leave":
+        index = int(split_command[1])
+        people = int(split_command[2])
+        train_list[index] -= people
+    command = input()
+
+print(train_list)

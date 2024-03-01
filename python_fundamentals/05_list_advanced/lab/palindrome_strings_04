@@ -1,0 +1,12 @@
+strings = input().split()
+searched_palindrom = input()
+palindromes = []
+
+for el in strings:
+    if el == el[::-1]:
+        palindromes.append(el)
+
+time_of_appearance = palindromes.count(searched_palindrom)
+
+print(palindromes)
+print(f"Found palindrome {time_of_appearance} times")

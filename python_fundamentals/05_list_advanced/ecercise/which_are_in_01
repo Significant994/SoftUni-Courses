@@ -1,0 +1,12 @@
+def is_found(sequence, word):
+    for element in sequence:
+        if word in element:
+            return True
+
+
+first_string = input().split(', ')
+second_string = input().split(', ')
+
+new_string = [element for element in first_string if is_found(second_string, element)]
+
+print(new_string)

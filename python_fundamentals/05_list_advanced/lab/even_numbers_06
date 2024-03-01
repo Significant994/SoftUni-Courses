@@ -1,0 +1,12 @@
+string_with_numbers = input().split(', ')
+
+numbers_as_digits = [int(number) for number in string_with_numbers]
+indices_list = []
+
+# for i in range(len(numbers_as_digits)):
+#     if numbers_as_digits[i] % 2 == 0:
+#         indices_list.append(i)
+
+indices_list = [index for index in range(len(numbers_as_digits)) if numbers_as_digits[index] % 2 == 0]
+
+print(indices_list)

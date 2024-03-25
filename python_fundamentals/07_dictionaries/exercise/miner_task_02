@@ -1,0 +1,16 @@
+resource_dict = {}
+
+while True:
+    command = input()
+    if command == "stop":
+        break
+    value = input()
+
+    key = command
+    quantity = int(value)
+    if key not in resource_dict:
+        resource_dict[key] = 0
+    resource_dict[key] += quantity
+
+for resource, value in resource_dict.items():
+    print(f"{resource} -> {value}")

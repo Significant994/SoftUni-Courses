@@ -1,0 +1,18 @@
+phonebook_dict = {}
+
+command = input()
+
+while len(command) > 2:
+    person, phone = command.split("-")
+    phonebook_dict[person] = phone
+
+    command = input()
+
+number_n = int(command)
+
+for _ in range(number_n):
+    searched_name = input()
+    if searched_name in phonebook_dict.keys():
+        print(f"{searched_name} -> {phonebook_dict[searched_name]}")
+    else:
+        print(f"Contact {searched_name} does not exist.")

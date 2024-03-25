@@ -1,0 +1,34 @@
+key_materials_dict = {'shards': 0, 'fragments': 0, 'motes': 0}
+junk_materials_dict = {}
+go_on = True
+while go_on:
+    materials = input().split()
+
+    for index in range(0, len(materials), 2):
+        value = int(materials[index])
+        material = materials[index + 1].lower()
+
+        if material in key_materials_dict.keys():
+            key_materials_dict[material] += value
+
+            if key_materials_dict[material] >= 250:
+
+                if material == 'shards':
+                    print("Shadowmourne obtained!")
+                elif material == 'fragments':
+                    print("Valanyr obtained!")
+                elif material == 'motes':
+                    print("Dragonwrath obtained!")
+                key_materials_dict[material] -= 250
+                go_on = False
+                break
+        else:
+            if material not in junk_materials_dict:
+                junk_materials_dict[material] = 0
+            junk_materials_dict[material] += value
+
+for el, value in key_materials_dict.items():
+    print(f"{el}: {value}")
+
+for el, value in junk_materials_dict.items():
+    print(f"{el}: {value}")

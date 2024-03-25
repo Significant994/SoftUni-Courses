@@ -1,0 +1,16 @@
+input_line = input().split()
+searched_products = input().split()
+
+products = {}
+
+for index in range(0, len(input_line), 2):
+    key = input_line[index]
+    value = int(input_line[index + 1])
+    products[key] = value
+
+for product in searched_products:
+    if product in products:
+        print(f"We have {products[product]} of {product} left")
+    else:
+        print(f"Sorry, we don't have {product}")
+

@@ -1,13 +1,13 @@
-words_keys = [el.lower() for el in input().split()]
-# input().lower().split()
+sequence_of_words = input().lower().split()
+
 default = 0
 
-occurrences = dict.fromkeys(words_keys, default)
-for word in words_keys:
-    occurrences[word] += 1
-    # occurrences[word] = words_keys.count(word)
+words_dict = dict.fromkeys(sequence_of_words, 0)
 
-for word, count in occurrences.items():
-    if count % 2 != 0:
-        print(word, end=' ')
+for word in sequence_of_words:
+    if word in words_dict:
+        words_dict[word] += 1
 
+for word, value in words_dict.items():
+    if value % 2 != 0:
+        print(f"{word}", end = ' ')

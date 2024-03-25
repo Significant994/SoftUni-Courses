@@ -1,0 +1,15 @@
+input_string = input().split()
+chars_dict = {}
+
+for word in input_string:
+    for char in word:
+        key = char
+        value = 1
+        if key in chars_dict:
+            chars_dict[key] += 1
+        else:
+            chars_dict[key] = value
+
+
+for chars, values in chars_dict.items():
+    print(f"{chars} -> {values}")

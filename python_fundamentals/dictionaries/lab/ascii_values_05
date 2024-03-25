@@ -1,0 +1,9 @@
+# characters = input().split(", ")
+# characters_dict = {}
+#
+# for el in characters:
+#     characters_dict[el] = ord(el)
+#
+# print(characters_dict)
+
+print(dict({el: ord(el) for el in input().split(", ")}))

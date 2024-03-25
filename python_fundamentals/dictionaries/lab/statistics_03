@@ -1,0 +1,21 @@
+groceries_dict = {}
+
+pairs_input = input()
+
+while pairs_input != "statistics":
+    key, value = pairs_input.split(": ")
+    value = int(value)
+    if key in groceries_dict:
+        groceries_dict[key] += value
+    else:
+        groceries_dict[key] = value
+
+    pairs_input = input()
+    total_products = len(groceries_dict)
+    total_quantity = sum(groceries_dict.values())
+
+print("Products in stock:")
+for product, value in groceries_dict.items():
+    print(f"- {product}: {value}")
+print(f"Total Products: {total_products}")
+print(f"Total Quantity: {total_quantity}")

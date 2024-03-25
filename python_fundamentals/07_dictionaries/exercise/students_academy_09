@@ -1,0 +1,16 @@
+students_dict = {}
+number_of_pairs = int(input())
+
+for _ in range(number_of_pairs):
+    student = input()
+    grade = float(input())
+
+    if student not in students_dict:
+        students_dict[student] = []
+    students_dict[student].append(grade)
+
+for student, grades in students_dict.items():
+    average_grade = sum(grades) / len(grades)
+    if average_grade >= 4.50:
+        print(f"{student} -> {average_grade:.2f}")
+        

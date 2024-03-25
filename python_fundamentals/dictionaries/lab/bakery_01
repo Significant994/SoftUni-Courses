@@ -1,0 +1,9 @@
+input_line = input().split()
+bakery_dict = {}
+
+for index in range(0, len(input_line), 2):
+    key = input_line[index]
+    value = int(input_line[index + 1])
+    bakery_dict[key] = value
+
+print(bakery_dict)

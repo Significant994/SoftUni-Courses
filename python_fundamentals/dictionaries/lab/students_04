@@ -1,0 +1,24 @@
+students_dict = {}
+
+data = input()
+
+while ":" in data:
+    data_args = data.split(":")
+    name = data_args[0]
+    students_id = data_args[1]
+    course = data_args[2]
+    students_dict[name] = []
+    students_dict[name].append(students_id)
+    students_dict[name].append(course)
+
+    data = input()
+else:
+    if "_" in data:
+        data_args = data.split("_")
+        course_name = data_args[0] + " " + data_args[1]
+    else:
+        course_name = data
+
+for name, course in students_dict.items():
+    if course[1] == course_name:
+        print(f"{name} - {course[0]}")
